@@ -1,4 +1,6 @@
-function Button({
+import React from "react";
+
+export default function Button({
   children,
   variant = "primary",
   disabled = false,

@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
-  "version": "1.0.0",
-  "private": true,
+  "name": "@thiendinhdnt/my-app",
+  "version": "2.0.1",
+  "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "babel src --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
@@ -40,6 +40,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
     "@storybook/addon-docs": "^9.0.18",
     "@storybook/addon-onboarding": "^9.0.18",
     "@storybook/preset-create-react-app": "^9.0.18",
@@ -54,8 +58,15 @@
     "tailwindcss": "^3.4.1",
     "webpack": "^5.100.2"
   },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "App.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "my-app"
@@ -64,5 +75,6 @@
     "my-app"
   ],
   "author": "Thien Dinh",
-  "license": "ISC"
+  "license": "ISC",
+  "module": "dist/index.js"
 }

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Checkbox({ label, id, checked, onChange }) {
   return (
     <label htmlFor={id} className="flex items-center space-x-2">
